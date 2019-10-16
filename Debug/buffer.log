@@ -1,0 +1,6 @@
+﻿  buffer.c
+C:\Users\Phill\source\repos\buffer\buffer.c(367,1): warning C4047:  'initializing': 'char' differs in levels of indirection from 'char [1]'
+  platy_bt.c
+  Generating Code...
+C:\Users\Phill\source\repos\buffer\buffer.c(643,47): warning C4047:  'return': 'char *' differs in levels of indirection from 'char'
+  buffer.vcxproj -> C:\Users\Phill\source\repos\buffer\Debug\buffer.exe
