@@ -177,7 +177,7 @@ pBuffer b_addc(pBuffer const pBD, char symbol)
 			{
 				increment = 1; /*Sets increment to 1*/
 			}
-			short tempCap = (short)pBD->capacity + (short)increment; /*Creates a short that holds the new calculated capacity*/
+			short tempCap = pBD->capacity + increment; /*Creates a short that holds the new calculated capacity*/
 			char* temp; /*Creates a char pointer that will be used to test the reallocation of the current cb_head*/
 			if (tempCap > (SHRT_MAX - 1) || tempCap < 0) /*Applies contents if tempcap is greater than the maximum unsigned short value or a negative number (indicating an overflow of the short)*/
 			{
@@ -330,7 +330,7 @@ int b_mode(Buffer* const pBD)
 	{
 		return pBD->mode;
 	}
-	return (int)NULL;
+	return NULL;
 	
 }
 /*
@@ -366,7 +366,7 @@ int b_load(FILE* const fi, Buffer* const pBD)
 	{
 		char unit = ""; /*Creates a char that holds the next value taken from the file pointer fi*/
 		int size = 0; /*Creates an int named size that tracks the number of characters added in the while loop*/
-		unit = (char)fgetc(fi); /*Sets unit to the character returned form fgetc()*/
+		unit = fgetc(fi); /*Sets unit to the character returned form fgetc()*/
 
 		if (feof(fi)) /*Checks if the file is empty or at the end*/
 		{
@@ -382,7 +382,7 @@ int b_load(FILE* const fi, Buffer* const pBD)
 				return size; /*Returns the value of size*/
 			}
 			size++;/*Increments the value of size by 1*/
-			unit = (char)fgetc(fi); /*Gets the next character from the file pointer fi*/
+			unit = fgetc(fi); /*Gets the next character from the file pointer fi*/
 
 		}
 		ungetc(unit, fi); /*Returns the value of unit back to the file pointer*/
@@ -472,9 +472,9 @@ int b_print(Buffer* const pBD, char nl)
 	{
 		int counter = 0; /*Creates an int to hold the number of characters printed*/
 		char temp = b_getc(pBD); /*Creates a new char and sets its value to the return value of b_getc*/
-		while (temp != (int)NULL) /*Loops until b_getc returns NULL*/
+		while (temp != NULL) /*Loops until b_getc returns NULL*/
 		{
-			if ((int)b_eob == 2) /*Breaks if EOB bit value is set indicating the end of the buffer*/
+			if (b_eob == 2) /*Breaks if EOB bit value is set indicating the end of the buffer*/
 			{
 				break;
 			}
@@ -498,16 +498,12 @@ int b_print(Buffer* const pBD, char nl)
 * Called functions: realloc(), b_limit()
 * Parameters: Buffer* const pBD (buffer pointer), char symbol (character to be added)
 * Return value: Buffer* (updated Buffer pointer upon success or NULL upon failure)
-* Algorithm: Validates passed in pointer isn't null and that compact won't overflow the datatype, reallocates the buffer size to the return value of b_limit +1 sets appropriate values to reflect the size and character increase in the current buffer
+* Algorithm: Validates passed in pointer isn't null, reallocates the buffer size to the return value of b_limit +1 sets appropriate values to reflect the size and character increase in the current buffer
 */
 Buffer* b_compact(Buffer* const pBD, char symbol)
 {
 	if (pBD) /*Validates the pointer passed in is not NULL*/
 	{
-		if ((unsigned short) pBD->addc_offset +1 > SHRT_MAX) /* Ensures compact doesn't overflow type short*/
-		{
-			return NULL;
-		}
 		char * temp;/*Creates a character pointer named temp to hold the pointer of the realloc*/
 		temp = realloc(pBD->cb_head, b_limit(pBD) + (1*sizeof(char))); /*Sets the temp char pointer to the return value of realloc*/
 		if (temp) /*If the realloc was successful, the contents run*/
@@ -606,7 +602,7 @@ int b_rewind(Buffer* const pBD)
 {
 	if (pBD) /*Validates the pointer passed in is not NULL*/
 	{
-		if (pBD->getc_offset != (int)NULL || pBD->getc_offset == 0)/*If getc_offset isn't null or if it does equal 0, sets the value of getc_offset to 0*/
+		if (pBD->getc_offset != NULL || pBD->getc_offset == 0)/*If getc_offset isn't null or if it does equal 0, sets the value of getc_offset to 0*/
 		{
 			pBD->getc_offset = 0;
 
@@ -615,7 +611,7 @@ int b_rewind(Buffer* const pBD)
 		{
 			return RT_FAIL_1;/*Returns the constant value RT_FAIL_1 upon failure*/
 		}
-		if (pBD->markc_offset != (int)NULL || pBD->markc_offset == 0) /*If markc_offset isn't null or if it does equal 0, sets the value of getc_offset to 0*/
+		if (pBD->markc_offset != NULL || pBD->markc_offset == 0) /*If markc_offset isn't null or if it does equal 0, sets the value of getc_offset to 0*/
 		{
 			pBD->markc_offset = 0;
 		}
@@ -640,7 +636,7 @@ char* b_location(Buffer* const pBD)
 {
 	if (pBD) /*Validates the pointer passed in is not NULL*/
 	{
-		return (char)pBD->cb_head[pBD->markc_offset];
+		return pBD->cb_head[pBD->markc_offset];
 	}
 	return NULL;
 }
