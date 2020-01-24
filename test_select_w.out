@@ -1,0 +1,67 @@
+Reading file test_select_w.pls ....Please wait
+
+Printing input buffer parameters:
+
+The capacity of the buffer is:  370
+The current size of the buffer is:  370
+
+Printing input buffer contents:
+
+!!This is the greatest of all programs
+!!The law of computer programming:
+!!"If a program is useless, it will have to be well documented." 
+
+PLATYPUS{
+    IF BLUE () THEN {}
+    ELSE{};
+
+    IF TRUE () THEN {}
+    ELSE{};
+
+    IB FALSE () THEN {}
+    ELSE{};
+
+    IF TRUE () THEN {}
+    ELSE{};
+
+    IF FALSE () THEN {}
+    ELBE{};
+
+    IF TRUE () THEB {}
+    ELSE{};
+}ÿ
+
+Parsing the source file...
+
+PLATY: Pre-condition parsed
+PLATY: Syntax error:  Line:  6
+*****  Token code:  2 Attribute: BLUE
+PLATY: Syntax error:  Line:  6
+*****  Token code: 16 Attribute: THEN
+PLATY: Syntax error:  Line:  9
+*****  Token code: 14 Attribute: NA
+PLATY: Syntax error:  Line: 10
+*****  Token code: 15 Attribute: NA
+PLATY: Opt_statements parsed
+PLATY: Syntax error:  Line: 13
+*****  Token code: 16 Attribute: ELSE
+PLATY: Syntax error:  Line: 15
+*****  Token code: 16 Attribute: IF
+PLATY: Syntax error:  Line: 15
+*****  Token code: 12 Attribute: NA
+PLATY: Opt_statements parsed
+PLATY: Syntax error:  Line: 16
+*****  Token code: 16 Attribute: ELSE
+PLATY: Syntax error:  Line: 18
+*****  Token code: 16 Attribute: IF
+PLATY: Selection statement parsed
+PLATY: Syntax error:  Line: 21
+*****  Token code: 16 Attribute: TRUE
+PLATY: Program parsed
+PLATY: Syntax error:  Line: 22
+*****  Token code: 14 Attribute: NA
+PLATY: Source file parsed
+
+Syntax errors: 11
+
+Collecting garbage...

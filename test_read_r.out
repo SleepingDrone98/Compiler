@@ -1,0 +1,24 @@
+Reading file test_read_r.pls ....Please wait
+
+Printing input buffer parameters:
+
+The capacity of the buffer is:  165
+The current size of the buffer is:  165
+
+Printing input buffer contents:
+
+!!This is the greatest of all programs
+!!The law of computer programming:
+!!"If a program is useless, it will have to be well documented." 
+
+PLATYPUS{
+    READ();
+}ÿ
+
+Parsing the source file...
+
+PLATY: Input statement parsed
+PLATY: Program parsed
+PLATY: Source file parsed
+
+Collecting garbage...

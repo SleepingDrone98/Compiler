@@ -1,0 +1,25 @@
+Reading file test_write_w.pls ....Please wait
+
+Printing input buffer parameters:
+
+The capacity of the buffer is:  166
+The current size of the buffer is:  166
+
+Printing input buffer contents:
+
+!!This is the greatest of all programs
+!!The law of computer programming:
+!!"If a program is useless, it will have to be well documented." 
+
+PLATYPUS{
+    WRIRE();
+}ÿ
+
+Parsing the source file...
+
+PLATY: Syntax error:  Line:  6
+*****  Token code: 12 Attribute: NA
+
+Syntax errors: 1
+
+Collecting garbage...

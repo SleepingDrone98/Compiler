@@ -1,0 +1,49 @@
+Reading file test_r.pls ....Please wait
+
+Printing input buffer parameters:
+
+The capacity of the buffer is:  69
+The current size of the buffer is:  69
+
+Printing input buffer contents:
+
+!!This is a test file!
+
+PLATYPUS{
+    c=((d+e)/a)*f-(((d-e)*a)/f);
+}ÿ
+
+Parsing the source file...
+
+PLATY: Primary arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Additive arithmetic expression parsed
+PLATY: Arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Multiplicative arithmetic expression parsed
+PLATY: Arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Multiplicative arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Additive arithmetic expression parsed
+PLATY: Arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Multiplicative arithmetic expression parsed
+PLATY: Arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Multiplicative arithmetic expression parsed
+PLATY: Arithmetic expression parsed
+PLATY: Primary arithmetic expression parsed
+PLATY: Additive arithmetic expression parsed
+PLATY: Arithmetic expression parsed
+PLATY: Assignment expression (arithmetic) parsed
+PLATY: Assignment statement parsed
+PLATY: Program parsed
+PLATY: Source file parsed
+
+Collecting garbage...

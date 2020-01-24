@@ -1,13 +1,20 @@
-/* Filename: table.h
- * Transition Table and function declarations necessary for the scanner implementation  
- * as required for CST8152 - Assignment #2.
- * Version: 1.19.2
- * Date: 2 October 2019
- * Provided by: Svillen Ranev
- * The file is incomplete. You are to complete it.
- ***************************************************
- * REPLACE THIS HEADER WITH YOUR HEADER
- ***************************************************
+ /*	File name: table.h
+ *	Compiler: MS Visual Studio 2019
+ *	Authors: 
+ *	-- Brady McIntosh SN# 040706980
+ *	-- Phillip Clarke SN# 040832994
+ *	Date: 12Nov2019
+ *	Professor: Sv. Ranev
+ *	Purpose: Transition Table and function declarations necessary for the scanner implementation  
+ *		as required for CST8152 - Assignment #2.
+ *	Function List:
+ *	-- aa_func02()
+ *	-- aa_func03()
+ *	-- aa_func05()
+ *	-- aa_func08()
+ *	-- aa_func10()
+ *	-- aa_func11()
+ *	-- aa_table[]()
  */
 
 #ifndef  TABLE_H_
@@ -23,6 +30,7 @@
 
 /*   Source end-of-file (SEOF) sentinel symbol
  *    '\0' or one of 255,0xFF,EOF
+
  */
 
 /*  Special case tokens processed separately one by one
@@ -44,13 +52,13 @@
 /*transition table - type of states defined in separate table */
 int  st_table[][TABLE_COLUMNS] = {
 	/* State 0 */	{  1,  6,  4, ES, ES,  9, IS, ES },
-	/* State 1 */	{  1,  1,  1, ES,  3,  2, ER,  2 },
+	/* State 1 */	{  1,  1,  1,  2,  3,  2, ER,  2 },
 	/* State 2 */	{ IS, IS, IS, IS, IS, IS, IS, IS },
 	/* State 3 */	{ IS, IS, IS, IS, IS, IS, IS, IS },
 	/* State 4 */	{ ES,  4,  4,  7,  5,  5, ER,  5 },
 	/* State 5 */	{ IS, IS, IS, IS, IS, IS, IS, IS },
-	/* State 6 */	{  5,  6,  5,  7, ES,  5, ER,  5 },
-	/* State 7 */	{ ES,  7,  7, ES,  8,  8, ER,  8 },
+	/* State 6 */	{ ES,  6,  ES, 7, ES,  5, ER,  5 },
+	/* State 7 */	{  8,  7,  7,  8,  8,  8, ER,  8 },
 	/* State 8 */	{ IS, IS, IS, IS, IS, IS, IS, IS },
 	/* State 9 */	{  9,  9,  9,  9,  9,  10,ER,  9 },
 	/* State 10 */	{ IS, IS, IS, IS, IS, IS, IS, IS },

@@ -1,0 +1,25 @@
+Reading file test_read_w.pls ....Please wait
+
+Printing input buffer parameters:
+
+The capacity of the buffer is:  165
+The current size of the buffer is:  165
+
+Printing input buffer contents:
+
+!!This is the greatest of all programs
+!!The law of computer programming:
+!!"If a program is useless, it will have to be well documented." 
+
+PLATYPUS{
+    RERD();
+}ÿ
+
+Parsing the source file...
+
+PLATY: Syntax error:  Line:  6
+*****  Token code: 12 Attribute: NA
+
+Syntax errors: 1
+
+Collecting garbage...

@@ -15,9 +15,9 @@
 
 /* Constants */
 
-#define VID_LEN 8   /* variable identifier length */
-#define ERR_LEN 20  /* error message length */
-#define INL_LEN 5   /* maximum number of digits for IL */
+#define VID_LEN	8	/* variable identifier length */
+#define ERR_LEN	20	/* error message length */
+#define INL_LEN	5	/* maximum number of digits for IL */
 
 /* Token codes */
 
